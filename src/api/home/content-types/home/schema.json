@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homepage",
+    "displayName": "Pagina Inicial",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "heroDescription": {
+      "type": "text",
+      "required": true
+    },
+    "aboutTitle": {
+      "type": "string",
+      "required": true
+    },
+    "aboutDescription": {
+      "type": "text",
+      "required": true
+    },
+    "organizers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::organizer.organizer"
+    },
+    "programacaos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::programacao.programacao"
+    }
+  }
+}
